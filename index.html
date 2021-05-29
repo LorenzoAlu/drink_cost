@@ -35,8 +35,7 @@
             <div class="col-10 text-center">
                 <h2>Instruzioni</h2>
                 <p>Inserisci nome ingrediente, quantità utilizzata, prezzo della bottiglia e capacità della bottiglia. Le quantità inserite devono essere espresse in cl.
-                    Puoi calcolare anche gli ingredienti solidi inserendo i dati espressi in grammi.
-                </p>
+                    Puoi calcolare anche gli ingredienti solidi inserendo i dati espressi in grammi. </p>
             </div>
         </div>
     </div>
@@ -57,17 +56,17 @@
                         </div>
                         <div class="mb-3">
                           <label for="qLiquor" class="form-label"> Dose (cl) ingrediente</label>
-                          <input type="number" class="form-control" id="qLiquor">
+                          <input type="number" class="form-control" id="qLiquor" min="0" step=".01">
                         </div>
                     </div>
                     <div class="col-5 col-md-5">
                         <div class="mb-3">
                             <label for="priceBottle" class="form-label">Prezzo della bottiglia</label>
-                            <input type="number" class="form-control" id="priceBottle">
+                            <input type="number" class="form-control" id="priceBottle" min="0" step=".01">
                         </div>
                         <div class="mb-3">
                             <label for="qBottle" class="form-label">Capienza bottiglia</label>
-                            <input type="number" class="form-control" id="qBottle">
+                            <input type="number" class="form-control" id="qBottle" min="0" step=".01">
                         </div>
                     </div>  
                 </div>

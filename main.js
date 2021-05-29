@@ -22,17 +22,17 @@ addIngredient.addEventListener('click',()=>{
                         </div>
                         <div class="mb-3">
                           <label for="qLiquor" class="form-label"> Dose (cl) ingrediente</label>
-                          <input type="number" class="form-control" id="qLiquor">
+                          <input type="number" class="form-control" id="qLiquor" min="0" step=".01">
                         </div>
                     </div>
                     <div class="col-5 col-md-5">
                         <div class="mb-3">
                             <label for="priceBottle" class="form-label">Prezzo della bottiglia</label>
-                            <input type="number" class="form-control" id="priceBottle">
+                            <input type="number" class="form-control" id="priceBottle" min="0" step=".01">
                         </div>
                         <div class="mb-3">
                             <label for="qBottle" class="form-label">Capienza bottiglia</label>
-                            <input type="number" class="form-control" id="qBottle">
+                            <input type="number" class="form-control" id="qBottle" min="0" step=".01">
                         </div>
                     </div>  
                 </div>
@@ -60,9 +60,13 @@ calculate.addEventListener('click',()=>{
 
    let totalPriceIngredient = 0 
    for (let i = 0; i < qLiquor.length; i++) {
-      let qL = parseInt(qLiquor[i].value)
-      let pB = parseInt(priceBottle[i].value)
-      let qB = parseInt(qBottle[i].value)
+      let qL = parseFloat(qLiquor[i].value)
+      let pB = parseFloat(priceBottle[i].value)
+      let qB = parseFloat(qBottle[i].value)
+
+      
+        console.log(qL)
+
       totalPriceIngredient += (drinkCoast(qL,pB,qB))
    }
 
