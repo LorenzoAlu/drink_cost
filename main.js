@@ -52,6 +52,11 @@ addIngredient.addEventListener("click", () => {
   });
 });
 
+deleteIngredient.addEventListener("click", () => {
+    informationWrapper.innerHTML='';
+    totalPrice.innerHTML='Inizia subito a calcolare il prezzo dei tuoi cocktail ;)';
+  });
+
 calculate.addEventListener("click", () => {
   informationWrapper.innerHTML = "";
 
