@@ -5,7 +5,7 @@ body {
 }
 
 :root {
-    --accen-color: #804400;
+    --accen-color: #FF8500;
 }
 
 * {
@@ -81,4 +81,23 @@ button {
     background-color: var(--accen-color) !important;
     border: 1px solid var(--accen-color) !important;
     border-radius: 3px !important;
+}
+
+/* footer */
+
+footer{
+    background-color: var(--accen-color);
+}
+
+a{
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+i{
+    color: white;
+}
+
+a:hover{
+    transform: scale(1.2);
 }

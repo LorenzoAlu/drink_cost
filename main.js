@@ -102,7 +102,7 @@ calculate.addEventListener("click", () => {
    <h3>il costo finale del tuo cocktail è approsimativamente di ${(
      totalPriceIngredient + 0.4
    ).toFixed(2)} € </h3>
-   <p>a questo devi aggiungere il prezzo del ghiaccio, il costo dell'elettricità e ed eventuale decorazione (che puoi calcolare come ingrediente)</p>
+   <p>tenendo conto del costo del ghiaccio, dell'elettricità e ed eventuale decorazione (che puoi calcolare come ingrediente)</p>
    <h3>Il prezzo al pubblico dovrebbe essere fra i ${(
      (totalPriceIngredient + 0.4) *
      2
