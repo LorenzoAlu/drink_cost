@@ -28,11 +28,23 @@
             </div>
           </div>
         </div>
-      </header>
+    </header>
 
-    <section class="container-fluid my-5 py-5">
-        <div class="row" id="addIngredientWrapper">
-            <div class="col-12">
+    <div class="container-fluid">
+        <div class="row justify-content-center mt-4">
+            <div class="col-10 text-center">
+                <h2>Instruzioni</h2>
+                <p>Inserisci nome ingrediente, quantità utilizzata, prezzo della bottiglia e capacità della bottiglia. Le quantità inserite devono essere espresse in cl.
+                    Puoi calcolare anche gli ingredienti solidi inserendo i dati espressi in grammi.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="container-fluid  py-5">
+        <div class="row justify-content-center" id="addIngredientWrapper">
+            <div class="col-12 col-md-10 ">
                 <div class="my-5 d-flex justify-content-around">
                     <button id="addIngredient" type="button" class="btn btn-primary">Aggiungi Ingredienti</button>
                     <button id="deleteIngredient" type="button" class="btn btn-danger">reset</button>
@@ -54,7 +66,7 @@
                             <input type="number" class="form-control" id="priceBottle">
                         </div>
                         <div class="mb-3">
-                            <label for="qBottle" class="form-label">Quantita della bottiglia</label>
+                            <label for="qBottle" class="form-label">Capienza bottiglia</label>
                             <input type="number" class="form-control" id="qBottle">
                         </div>
                     </div>  
@@ -72,14 +84,14 @@
 
     <section class="container-fluid py-5">
         <div class="row justify-content-center">
-            <!-- <div class="col-12">
-              
-            </div> -->
-            <div class="col-10 card-custom" id="informationWrapper"> 
-            <h3>
-                <span id="totalPrice"></span>
-            </h3>
-                
+
+            <div class="col-10 card-custom">
+                <div>
+                    <span id="totalPrice"></span>
+                </div>
+                <div id="informationWrapper">
+     
+                </div>
             </div>
         </div>
     </section>

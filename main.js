@@ -11,7 +11,7 @@ let informationWrapper = document.querySelector('#informationWrapper')
 
 addIngredient.addEventListener('click',()=>{
     let div = document.createElement('div')
-    div.classList.add('col-12')
+    div.classList.add('col-12','col-md-10')
     div.innerHTML=
     `
                 <div class="d-flex justify-content-around card-custom my-3">
@@ -31,7 +31,7 @@ addIngredient.addEventListener('click',()=>{
                             <input type="number" class="form-control" id="priceBottle">
                         </div>
                         <div class="mb-3">
-                            <label for="qBottle" class="form-label">Quantita della bottiglia</label>
+                            <label for="qBottle" class="form-label">Capienza bottiglia</label>
                             <input type="number" class="form-control" id="qBottle">
                         </div>
                     </div>  
@@ -51,6 +51,9 @@ addIngredient.addEventListener('click',()=>{
 
 
 calculate.addEventListener('click',()=>{
+    
+    informationWrapper.innerHTML=''
+
    let qLiquor = document.querySelectorAll('#qLiquor')
    let priceBottle = document.querySelectorAll('#priceBottle')
    let qBottle = document.querySelectorAll('#qBottle')
@@ -65,21 +68,24 @@ calculate.addEventListener('click',()=>{
 
    totalPrice.innerHTML = 
    `
-   il cocktail ti costa ${totalPriceIngredient.toFixed(2)} a questo devi aggiungere il prezzo del ghiaccio, il costo dell'elettricità e l'ipotetico dipendente, il costo finale del tuo cocktail è di ${(totalPriceIngredient + 0.50).toFixed(2)},
-   Il prezzo al pubblico dovrebbe essere fra i ${(totalPriceIngredient * 2).toFixed(2)} e i ${(totalPriceIngredient * 3).toFixed(2)}
+   <h3>il cocktail costa: ${totalPriceIngredient.toFixed(2)} </h3>
+   <h3>il costo finale del tuo cocktail è approsimativamente di ${(totalPriceIngredient + 0.40).toFixed(2)}</h3>
+   <p>a questo devi aggiungere il prezzo del ghiaccio, il costo dell'elettricità e ed eventuale decorazione (che puoi calcolare come ingrediente)</p>
+   <h3>Il prezzo al pubblico dovrebbe essere fra i ${((totalPriceIngredient  + 0.40) * 2).toFixed(2)} e i ${((totalPriceIngredient  + 0.40) * 3).toFixed(2)} </h3>
    `
 
    let nameIngredient = document.querySelectorAll('#nameIngredient')
 
-   console.log(nameIngredient)
 
    nameIngredient.forEach((el,i)=>{
+
     let qL = qLiquor[i].value
     let pB = priceBottle[i].value
     let qB = qBottle[i].value
 
 
       let p=document.createElement('p')
+      
       p.innerHTML= `L'ingrediente ${el.value} costa ${drinkCoast(qL,pB,qB).toFixed(2)} euro `
       informationWrapper.appendChild(p)
 
