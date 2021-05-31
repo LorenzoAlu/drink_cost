@@ -64,6 +64,7 @@ deleteIngredient.addEventListener("click", () => {
 });
 
 calculate.addEventListener("click", () => {
+
   informationWrapper.innerHTML = "";
 
   let qLiquor = document.querySelectorAll("#qLiquor");
@@ -73,6 +74,10 @@ calculate.addEventListener("click", () => {
   let gradoAlcolico=document.querySelectorAll('#gradoAlcolico')
   let pesoSpecificoA = 0.79
   let nameIngredient = document.querySelectorAll("#nameIngredient");
+
+  console.log(Boolean(qLiquor[0].value))
+  console.log(priceBottle)
+  console.log(qBottle)
 
 
   let totalPriceIngredient = 0;
@@ -192,8 +197,6 @@ calculate.addEventListener("click", () => {
     }
   }
 
-  console.log(volumeAlcolicoCocktail)
-  console.log(volumeCocktail)
 
   let grammiAlcool = pesoSpecificoA * volumeAlcolicoCocktail
   let percentualeAlcolica = gradoAlcolicoCocktail(volumeCocktail,volumeAlcolicoCocktail) 
