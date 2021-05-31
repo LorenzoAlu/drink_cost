@@ -74,11 +74,10 @@ calculate.addEventListener("click", () => {
   let gradoAlcolico=document.querySelectorAll('#gradoAlcolico')
   let pesoSpecificoA = 0.79
   let nameIngredient = document.querySelectorAll("#nameIngredient");
-
-  console.log(Boolean(qLiquor[0].value))
-  console.log(priceBottle)
-  console.log(qBottle)
-
+    console.log(nameIngredient)
+    console.log(qLiquor)
+    console.log(priceBottle)
+ 
 
   let totalPriceIngredient = 0;
   let volumeAlcolicoCocktail= 0;
@@ -91,7 +90,20 @@ calculate.addEventListener("click", () => {
     let UMi = UM[i].value;
     let gA = parseFloat(gradoAlcolico[i].value)
     let nI = nameIngredient[i].value
-    
+    console.log(nI)
+    console.log(qL)
+    console.log(pB)
+
+    if(isNaN(qL) || isNaN(pB) || isNaN(qB) || isNaN(gA) || nI.trim() == ''){
+      alert("Attenzione! E' presente un campo vuoto!");
+      totalPrice.innerHTML= ""
+      totalPrice.innerHTML=
+      `
+      Non lasciare campi vuoti, se aggiungi un ingrediente devi compilare tutti i form!
+      `
+      break
+      
+    }else{
 
     if (UMi == "cl" || UMi == "pz") {
 
@@ -230,7 +242,7 @@ calculate.addEventListener("click", () => {
   //   ).toFixed(2)} euro `;
   //   informationWrapper.appendChild(p);
   // });
-});
+}});
 
 function drinkCoast(qL, pB, qB) {
   if (qL && pB && qB) {
