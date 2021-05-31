@@ -28,6 +28,10 @@
     <meta property="twitter:description" content="Calcola il Drink Cost dei tuoi cocktail
     TU! che stai dietro il bancone del locale, ti sei mai chiesto quanto ti costa il bere che fai? no? bene se hai questa curiosità puoi calcolare qui il drink cost del tuo cocktail, Inserisci la tua ricetta e vedi quanto ti costa placare la sete dei tuoi clienti!">
     <meta property="twitter:image" content="./media/drink_screen.jpg">
+
+    <!-- favicon  -->
+    <link rel="shortcut icon" href="./media/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./media/favicon.ico" type="image/x-icon">   
   </head>
   <body>
 
@@ -85,6 +89,7 @@
                             <select id="UM" class="form-select w-50" aria-label="Default select example">
                               <option selected value="cl">cl</option>
                               <option value="oz">oz</option>
+                              <option value="mm">ml</option>
                               <option value="drop">drop</option>
                               <option value="dash">dash</option>
                               <option value="tsp">tsp</option>
@@ -92,6 +97,10 @@
                               <option value="pz">pz</option>
                             </select>
                           </div> 
+                        </div>
+                        <div class="mb-3">
+                            <label for="gradoAlcolico" class="form-label">Grado alcolica (%)</label>
+                            <input type="number" class="form-control" id="gradoAlcolico" min="0" step=".01">
                         </div>
                     </div>
                     <div class="col-5 col-md-5 ">
@@ -123,9 +132,18 @@
                 <div>
                     <span id="totalPrice"> Inizia subito a calcolare il prezzo dei tuoi cocktail ;)</span>
                 </div>
-                <div id="informationWrapper">
+                <div class="my-3" id="informationWrapper">
      
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid my-3">
+        <div class="row justify-content-center">
+            <div class="col-10 card-custom ">
+                <h3> Grado alcolico e Grammi di alcol.</h3>
+                 <p>Il <b>grado alcolico </b> è indica la forza alcolica del prodotto, ossia un’idea di quanto alcol si percepisce mentre lo si beve: l’alcol, infatti, trasmette alle mucose della bocca una sensazione calorica, di bruciore, di intensità variabile con la sua percentuale.Nonostante il valore sia semplice e immediato, esso è poco indicativo e può trarre in inganno (in particolare nei long drink): il cliente infatti non riesce a capire quanto alcol assume effettivamente.I <b> grammi di alcol</b> indicano quanto alcol si introduce nel corpo.</p>
             </div>
         </div>
     </section>
