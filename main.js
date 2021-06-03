@@ -11,44 +11,40 @@ addIngredient.addEventListener("click", () => {
   let div = document.createElement("div");
   div.classList.add("col-12", "col-md-10");
   div.innerHTML = `
-            <div class="d-flex justify-content-around card-custom my-3">
-                    <div class="col-5 col-md-5 ">
-                        <div class="mb-3">
-                            <label for="nameIngredient" class="form-label">Nome Ingrediente ricetta / soft drink</label>
-                            <input type="text" class="form-control" id="nameIngredient">
-                        </div>
-                        <div class="mb-3">
-                          <label for="qLiquor" class="form-label"> Dose ingrediente / quantità </label>
-                          <div class="d-flex">
-                            <input type="number" class="form-control w-50" id="qLiquor" min="0" step=".01">
-                            <select id="UM" class="form-select w-50" aria-label="Default select example">
-                              <option selected value="cl">cl</option>
-                              <option value="oz">oz</option>
-                              <option value="mm">ml</option>
-                              <option value="drop">drop</option>
-                              <option value="dash">dash</option>
-                              <option value="tsp">tsp</option>
-                              <option value="tbsp">tbsp</option>
-                              <option value="pz">pz</option>
-                            </select>
-                          </div> 
-                        </div>
-                        <div class="mb-3">
-                        <label for="gradoAlcolico" class="form-label">Grado alcolica (%)</label>
-                        <input type="number" class="form-control" id="gradoAlcolico" min="0" step=".01">
-                        </div>
-                    </div>
-                    <div class="col-5 col-md-5 ">
-                        <div class="mb-3">
-                            <label for="priceBottle" class="form-label">Prezzo della bottiglia / cassa</label>
-                            <input type="number" class="form-control" id="priceBottle" min="0" step=".01">
-                        </div>
-                        <div class="mb-3">
-                            <label for="qBottle" class="form-label">Capienza bottiglia (cl) / quantità cassa</label>
-                            <input type="number" class="form-control" id="qBottle" min="0" step=".01">
-                        </div>
-                    </div>  
-            </div>
+  <div class=" justify-content-around card-custom my-3">
+  <div class="mb-3">
+      <label for="nameIngredient" class="form-label">Nome Ingrediente ricetta / soft drink</label>
+      <input type="text" class="form-control" id="nameIngredient">
+  </div>
+  <div class="mb-3">
+    <label for="qLiquor" class="form-label"> Dose ingrediente / quantità </label>
+    <div class="d-flex">
+      <input type="number" class="form-control w-50" id="qLiquor" min="0" step=".01">
+      <select id="UM" class="form-select w-50" aria-label="Default select example">
+        <option selected value="cl">cl</option>
+        <option value="oz">oz</option>
+        <option value="mm">ml</option>
+        <option value="drop">drop</option>
+        <option value="dash">dash</option>
+        <option value="tsp">tsp</option>
+        <option value="tbsp">tbsp</option>
+        <option value="pz">pz</option>
+      </select>
+    </div> 
+  </div>
+  <div class="mb-3">
+      <label for="gradoAlcolico" class="form-label">Grado alcolica (%)</label>
+      <input type="number" class="form-control" id="gradoAlcolico" min="0" step=".01">
+  </div>
+  <div class="mb-3">
+      <label for="priceBottle" class="form-label">Prezzo della bottiglia / cassa</label>
+      <input type="number" class="form-control" id="priceBottle" min="0" step=".01">
+  </div>
+  <div class="mb-3">
+      <label for="qBottle" class="form-label">Capienza bottiglia (cl) / quantità cassa</label>
+      <input type="number" class="form-control" id="qBottle" min="0" step=".01">
+  </div>
+</div>
     `;
   addIngredientWrapper.appendChild(div);
 
