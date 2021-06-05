@@ -11,7 +11,7 @@ addIngredient.addEventListener("click", () => {
   let div = document.createElement("div");
   div.classList.add("col-12", "col-md-10");
   div.innerHTML = `
-  <div class=" justify-content-around card-custom my-5">
+  <div class=" justify-content-around card-custom mb-5  text-start text-md-center">
   <div class="mb-3">
       <label for="nameIngredient" class="form-label">Nome Ingrediente ricetta / soft drink</label>
       <input type="text" class="form-control" id="nameIngredient">
